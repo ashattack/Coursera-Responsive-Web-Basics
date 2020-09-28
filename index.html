@@ -1,5 +1,7 @@
 <html>
 	<head>
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
 	<title>Ashlyns page</title>
 	
 	<link rel="stylesheet"
@@ -30,7 +32,7 @@
 	
 		<hr></hr>
 <div class="container">
-	<h1>How to be a tough cookie</h1>
+	<h1 id="title" onclick="withCookies();">How to be a tough cookie</h1>
 	
 	<div class="row">
 		<div class="col-md-6 thin_border">
@@ -57,4 +59,14 @@
 		</p>
 		
 	</body>
+	<script type="text/javascript">
+		function withCookies(){
+			console.log("How to be one with the cookies");
+			$("#title").html("How to be one with the cookies");
+			$("#title").click(function () {
+				$("#title").html("How to be a tough cookie");
+				$("#title").off(click);
+			});
+		};
+	</script>
 </html>
