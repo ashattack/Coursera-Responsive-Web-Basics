@@ -6,6 +6,21 @@
 			type="text/css"
 			href="bootstrap.css"
 			/>
+	<link rel="stylesheet"
+			type="text/css"
+			href="bootstraps.css"
+			/>
+
+			<link rel="stylesheet"
+			type="text/css"
+			href="style.css"
+			/>	
+
+			<link rel="stylesheet"
+			type="text/css"
+			href="styles.css"
+			/>	
+			<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 	<body>
 		<a hre
@@ -24,14 +39,106 @@ Contact me
 
 <hr></hr>
 
-<h1>All about sassy Ash</h1>
+<div class="container">
+	<h1>My life as a jpeg</h1>
 
-<a href="alienAsh.png">
-	<img 
-		src="alienAsh.png" 
-		width="50%"
-	/>
-</a>
-<h3>This is me when I've recently popped out of a UFO</h3>
+
+
+<div class="row">
+	<div class="col-md-3">
+		<img id="image1" 
+		 class="crop-img" src="2hot4austria.png" alt="Me sweating my buns off in Austria"/> 
+	</div>
+	<div class="col-md-3">
+		<img id="image2" class="crop-img" src="blep.png" alt="my dog (a pitbull) sticking her tounge out"/> 
+	</div>
+	<div class="col-md-3">
+		<img id="image3" class="crop-img" src="businessAsh.png" alt="Me looking all professional from the back"/> 
+	</div>
+	<div class="col-md-3">
+		<img id="image4" class="crop-img" src="tamales.png" alt="Spanish food on a plate"/> 
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-1">
+		<button id="backward">&lt;</button>
+	</div>
+	<div class="col-md-10">
+		<img id="bigImage" class="large-img" src="2hot4austria.png" alt="Me sweating my buns off in Austria"/> 
+	</div>
+	<div class="col-md-1">
+		<button id="forward">&gt;</button>
+	</div>
+</div>
+</div>
+
+<script>
+	
+	var paused = false;
+
+	// when you click on a thumbnail
+	// it sets the src of the big image
+	// to be the same as the image
+	// you clicked on
+	$(".crop-img").click(function(){
+		$("#bigImage").attr('src', 
+			$(this).attr('src'));
+	});
+
+		var counter = 1;
+		
+		$("#image"+counter).click();
+
+		$("#backward").click(function (){
+			
+			counter = counter - 1;
+			
+			if(counter < 1){
+				counter = 4;
+			}
+			
+			$("#image"+counter).click();
+		});
+
+		// when you click on the backwards
+		// button select the next image
+		$("#forward").click(function (){
+			// go forward one in the counter
+			counter = counter + 1;
+			// if we are above 4 (the last
+			// image) loop round to 1 (the
+			// first image)
+			if(counter > 4){
+				counter = 1;
+			}
+			// virtually click on the current
+			// image to load it into the big image
+			$("#image"+counter).click();
+		});
+
+		// when you click the big image 
+		// toggle pausing. Set paused to 
+		// not paused, i.e. if it is paused
+		// set it to not paused, if it is 
+		// not paused set it to paused
+		$("#bigImage").click(function (){
+			paused = !paused;
+		});
+
+		// set interval makes it move 
+		// forward every 3 second
+		setInterval(function (){
+			// first check if it is paused
+			if(!paused){
+				// virtual click the forward
+				// button
+				$("#forward").click();
+			};
+		}, 3000);
+	</script>
+
+
+
 </body>
 </html>
