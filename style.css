@@ -4,7 +4,8 @@
   }
   
   .large-img{
-    max-width:100%;
+    max-width:75%;
+    min-height: 25%;
   }
   
   .carousel-img{
