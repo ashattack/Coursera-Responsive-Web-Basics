@@ -1,7 +1,4 @@
-body {
-	background: gray;
-	color: white;
-}
+
 
 a {
 	color:black;
@@ -11,8 +8,17 @@ a {
 a:hover {
 	color:pink;
 	background: black;
-	}
-	
+}
+
+body {
+	background: gray;
+	color: white;
+}
+
+.gap_below {
+	margin-bottom:25px;
+}
+
 .greenlink:hover {
 	color:green;
 	background: gray;
@@ -27,12 +33,16 @@ h1 {
 	margin-left:10px;
 }
 
-.gap_below {
-	margin-bottom:25px;
+#para2 {
+	background-color: black;
 }
-
 /* use this to put borders around things */ 
 .thin_border{
 	border: 1px solid black;
 }
+
+.thick_border{
+	border: 2px solid red;
+}
+
 

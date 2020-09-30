@@ -56,12 +56,13 @@
 			Lunart Cookieth. He was a silly man, looked down upon for his rambunctious ways. He was constantly riducled for his 
 			plump nature and even though it meant that he was well fed. There was one day 		</p>
 		
-		<p>
-		
-			Clearly the second paragraph
-		
-		
+			<div class="row">
+				<div class="col-md-3 thick_border">
+		<p id="para2" onclick="touchMe()";>
+			Press me! I wanna be touched..
 		</p>
+		</div>
+		</div>
 		
 	</body>
 	<script type="text/javascript">
@@ -72,6 +73,16 @@
 				$("#title").html("How to be a tough cookie");
 				$("#title").off(click);
 			});
+		};
+	</script>
+	<script type="text/javascript">
+		function touchMe(){
+			console.log("Ooo that feels goood hehe");
+			$("#para2").html("Ooo that feels goood hehe");
+			$("#para2").click(function () {
+			$("#para2").html("Press on me! I wanna be touched..");
+			$("#para2").off(click);
+		});
 		};
 	</script>
 </html>
