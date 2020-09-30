@@ -46,6 +46,13 @@
 	
         <hr></hr>
         <div class="container">
+           
+            <div class="row">
+                <div class="col-md-12">
+                    <button class="btn btn-default js-go-day">DAY NODE</button>
+                    <button class="btn btn-default js-go-night">NIGHT NODE</button>
+                </div>
+            </div>
 
             <!-- 
                  we have 1 row that contains 2 columns
@@ -1282,6 +1289,19 @@ Thanks again everyone, and please let me know if you find anything.
         </div>
     
         <script>
+
+$('.js-go-night').click(function(){
+			$('body').addClass('night');
+$('div').addClass('night');
+$('li').addClass('night');
+		});
+
+		$('.js-go-day').click(function(){
+			$('body').removeClass('night');
+$('div').removeClass('night');
+$('li').removeClass('night');
+		});
+
             // this is a variable to keep track
             // of which chapter we are on
             var counter = 0;
