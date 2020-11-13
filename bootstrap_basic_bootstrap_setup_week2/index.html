@@ -17,13 +17,30 @@
   <body>
 
   <nav class="navbar navbar-default">
-    <div class="container-fluid">
+
+    <!-- / start of collapsed navbar-->
+    <div class="navbar-header">
+      <button
+      type="button"
+      class="navbar-toggle collapsed"
+      data-toggle="collapse"
+      data-target="#main_navbar"
+      aria-expanded="false">
+      open!
+    </button>
+    </div><!-- /end collapsed navbar-->
+    
+    <!-- start un-collapsed navbar-->
+    <div 
+    class="collapse navbar-collapse"
+    id="main_navbar">
       <ul class="nav navbar-nav">
-        <li><a href="#">Home</a></li>
+        <li class="active"> <!-- the -class active- highlights the tab you are located in the nav bar --> <a href="#">Home</a></li>
         <li><a href="#">My photos</a></li>
       </ul>
-    </div>
-  </nav>    
+    </div><!-- end un-collapsed navbar-->
+  </nav>   <!-- container -->
+
     <div class="container">
       <h1>Hello welcome to my bootstrap site</h1>
     </div>
