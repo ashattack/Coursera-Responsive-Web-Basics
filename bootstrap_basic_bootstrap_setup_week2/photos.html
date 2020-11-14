@@ -4,7 +4,7 @@
    <title></title>
 
     <link href="css/bootstrap.css" rel="stylesheet"> <!-- pulls in the main bootstrap content we need -->
-    
+    <link href="css/styles.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -35,16 +35,35 @@
     class="collapse navbar-collapse"
     id="main_navbar">
       <ul class="nav navbar-nav">
-        <li class="active"> <!-- the -class active- highlights the tab you are located in the nav bar --> <a href="#">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="albums.html">Albums</a></li>
-        <li><a href="photos.html">All photos</a></li>
+        <li class="active"><a href="photos.html">All Photos</a></li>
+
       </ul>
     </div><!-- end un-collapsed navbar-->
   </nav>   <!-- container -->
 
-    <div class="container">
-      <h1>Hello welcome to my bootstrap site</h1>
-    </div>
+  <div class="container">
+    <h1>Here are the photos</h1>
+
+    <a href="photo1.html"><img class="photo_list" src="./images/img_1.jpg" 
+        alt="graffiti wall" /></a>
+
+    <a href="photo1.html"><img class="photo_list" src="./images/img_2.jpg" 
+        alt="graffiti wall" /></a>
+
+    <a href="photo1.html"><img class="photo_list" src="./images/img_3.jpg" 
+        alt="graffiti wall" /></a>
+
+    <a href="photo1.html"><img class="photo_list" src="./images/img_4.jpg" 
+        alt="graffiti wall" /></a>
+
+    <a href="photo1.html"><img class="photo_list" src="./images/img_5.jpg" 
+        alt="graffiti wall" /></a>
+
+   
+
+  </div>
   
     <script src="js/jquery.min.js"></script> <!-- jquery libraries -->
     <script src="js/bootstrap.min.js"></script> <!-- bootsrap libraries -->
